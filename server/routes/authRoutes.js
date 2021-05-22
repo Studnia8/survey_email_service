@@ -16,4 +16,3 @@ module.exports = app => {
         res.send(req.user); // show current loged in user
     })
 };
-//test
