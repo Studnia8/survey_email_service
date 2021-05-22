@@ -18,6 +18,7 @@ passport.use(new googleStrategy({ // google authorization
     clientID: keys.googleClientID,
     clientSecret: keys.googleClientSecret,
     callbackURL: '/auth/google/callback',
+    proxy: true,
 }, (accessToken, refreshToken, profile, done) => { // profile contains the data about user
     User.findOne({ googleID: profile.id })
         .then((existingUser) => {
