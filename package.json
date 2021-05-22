@@ -1,5 +1,5 @@
 {
-    "name": "fullstackwebapplication",
+    "name": "emailyapp",
     "version": "1.0.0",
     "description": "application fullstack using react, redux, node, express, mongodb",
     "main": "index.js",
