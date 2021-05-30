@@ -1,5 +1,5 @@
 {
-    "name": "emailyapp",
+    "name": "server",
     "version": "1.0.0",
     "description": "application fullstack using react, redux, node, express, mongodb",
     "main": "index.js",
@@ -9,7 +9,9 @@
     },
     "scripts": {
         "start": "node index.js",
-        "dev": "nodemon index.js"
+        "server": "nodemon index.js",
+        "client": "npm run start --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client\""
     },
     "repository": {
         "type": "git",
@@ -22,6 +24,7 @@
     },
     "homepage": "https://github.com/Studnia8/survey_email_service#readme",
     "dependencies": {
+        "concurrently": "^6.1.0",
         "cookie-session": "^1.4.0",
         "express": "^4.17.1",
         "mongoose": "^5.12.9",
