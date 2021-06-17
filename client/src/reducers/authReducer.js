@@ -1,6 +1,6 @@
 import { FETCH_USER } from "../actions/types";
 
-const fun = function (state = null, action) {
+const authReducer = function (state = null, action) {
   switch (action.type) {
     case FETCH_USER:
       return action.payload || false;
@@ -9,4 +9,4 @@ const fun = function (state = null, action) {
   }
 };
 
-export default fun;
+export default authReducer;

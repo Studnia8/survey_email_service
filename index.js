@@ -3,7 +3,8 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const cookieSession = require("cookie-session");
 const bodyParser = require("body-parser");
-require("./models/users");
+require("./models/User");
+require("./models/Survey");
 require("./services/passport");
 const keys = require("./config/keys");
 
@@ -31,6 +32,7 @@ app.use(passport.session());
 // calling the routes
 require("./routes/authRoutes")(app);
 require("./routes/billingRoutes")(app);
+require("./routes/surveyRoutes")(app);
 
 // dealing with prod environment
 if (process.env.NODE_ENV === "production") {
